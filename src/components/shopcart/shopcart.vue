@@ -29,7 +29,7 @@
 
       <transition name="fold">
         <div class="shopcart-list" v-show="listShow"> 
-          <div class="list-header">  <h1 class="title">购物车</h1>  <span class="empty" @click="empty">清空</span> </div>
+          <div class="list-header">  <h1 class="title">购物车</h1>  <span class="empty">清空</span> </div>
           <div class="list-content" ref="listContent"> 
             <ul> 
               <li class="food border" v-for="food in cartProducts">  <span class="name">{{food.name}}</span> 
@@ -109,9 +109,6 @@
           })
         }
         return show
-      },
-      empty () {
-        this.cartProducts = null
       }
     },
     data() {
